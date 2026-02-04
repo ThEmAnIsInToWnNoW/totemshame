@@ -1,0 +1,55 @@
+{
+  "enabled": true,
+  "triggerForLocalPlayerOnly": true,
+  "cooldownMs": 1000,
+  "overlay": {
+    "durationMs": 1400,
+    "animation": "fade-slide",
+    "startOffset": { "x": 0, "y": -40 },
+    "endOffset": { "x": 0, "y": -80 },
+    "fontSize": 22,
+    "textColor": "#FFDD55",
+    "shadow": true,
+    "position": "top-center"
+  },
+  "sounds": {
+    "enabled": true,
+    "volume": 0.9,
+    "soundPool": [
+      "totemshame:vine-boom",
+      "totemshame:death-bong",
+      "minecraft:item.totem.use"
+    ]
+  },
+  "captions": {
+    "globalChance": 1.0,
+    "list": [
+      "Skill issue.",
+      "What a loser.",
+      "Bro almost folded.",
+      "One HP hero.",
+      "R.I.P HP",
+      "That was close!",
+      "Try again, champ."
+    ]
+  },
+  "visualEffects": {
+    "particles": true,
+    "shake": false,
+    "screenTint": {
+      "enabled": false,
+      "color": "#FF0000",
+      "alpha": 0.2,
+      "durationMs": 300
+    }
+  },
+  "autoSync": {
+    "enabled": true,
+    "repoOwner": "ThEmAnIsInToWnNoW",
+    "repoName": "sounds",
+    "branch": "main",
+    "path": "",
+    "localResourcePackFolder": "config/totemshame/resourcepack",
+    "maxRetries": 2
+  }
+}

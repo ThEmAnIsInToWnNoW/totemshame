@@ -1,0 +1,16 @@
+// ... existing file above; add to dependencies block:
+plugins {
+    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'maven-publish'
+}
+
+dependencies {
+    // existing dependencies...
+    // AutoConfig + Cloth Config (for in-game config UI)
+    modImplementation "me.shedaniel.autoconfig:autoconfig-fabric:4.2.0"
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:9.0.46"
+    // Optional: Mod Menu compile-time dependency to compile ModMenuIntegration
+    // At runtime Mod Menu does not need to be present unless you want the Mod Menu integration button.
+    // If you prefer to compile without modmenu on the classpath, mark it as compileOnly or remove and use reflection.
+    modImplementation "com.terraformersmc:modmenu:5.3.0"
+}
