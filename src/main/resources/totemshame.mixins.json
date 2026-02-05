@@ -1,0 +1,6 @@
+{
+    "required": true,
+    "minVersion": "0.8.0",
+    "package": "com.totemshame.mixin",
+    "mixins": []
+}

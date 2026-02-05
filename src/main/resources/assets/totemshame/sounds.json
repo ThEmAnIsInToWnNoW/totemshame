@@ -1,0 +1,7 @@
+{
+    "sounds": {
+        "example_sound": {
+            "sounds": ["example/path/to/sound.ogg"]
+        }
+    }
+}

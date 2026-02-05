@@ -1,0 +1,13 @@
+{
+    "schemaVersion": 1,
+    "id": "totemshame",
+    "version": "1.0.0",
+    "description": "A Fabric mod for enhancing Minecraft gameplay.",
+    "name": "Totem Shame",
+    "mixins": [
+        "totemshame.mixins.json"
+    ],
+    "depends": {
+        "fabric": "*"
+    }
+}
