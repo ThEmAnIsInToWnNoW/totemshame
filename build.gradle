@@ -1,14 +1,44 @@
 plugins {
+    id 'fabric-loom' version '1.4-SNAPSHOT'
     id 'java'
-    id 'maven-publish'
 }
+
+group = 'com.totemshame'
+version = '1.0.0'
+archivesBaseName = 'totemshame'
 
 repositories {
     mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
 }
+
+def minecraftVersion = project.property("minecraft_version")
+def yarnMappings = project.property("yarn_mappings")
+def loaderVersion = project.property("fabric_loader_version")
+def fabricApiVersion = project.property("fabric_api_version")
 
 dependencies {
-    // Define your dependencies here
+    minecraft "com.mojang:minecraft:${minecraftVersion}"
+    mappings "net.fabricmc:yarn:${yarnMappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${loaderVersion}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabricApiVersion}"
+
+    // For in-game config & mod menu (compile-time)
+    modImplementation "me.shedaniel.autoconfig:autoconfig-fabric:4.2.0"
+    modImplementation "me.shedaniel.cloth:cloth-config-fabric:9.0.46"
+    modImplementation "com.terraformersmc:modmenu:5.3.0"
 }
 
-// Define tasks, publishing, etc.
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    from('LICENSE') {
+        into 'META-INF'
+    }
+}
